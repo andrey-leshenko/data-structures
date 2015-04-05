@@ -2,17 +2,17 @@
 
 namespace DataStructures.Examples
 {
-    class BinaryHeapExamples
+    static class BinaryHeapExamples
     {
         public static void Example1()
         {
             BinaryHeap b = new BinaryHeap();
-            b.Add(5);
-            b.Add(7);
-            b.Add(3);
-            b.Add(0);
-            b.Add(15);
-            b.Add(8);
+            b.Insert(5);
+            b.Insert(7);
+            b.Insert(3);
+            b.Insert(0);
+            b.Insert(15);
+            b.Insert(8);
 
             while (b.Count() > 0) {
                 Console.Write(b.PopMax() + ", ");

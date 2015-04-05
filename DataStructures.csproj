@@ -48,7 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="examples\BinaryHeapExamples.cs" />
+    <Compile Include="examples\BinominalHeapExamples.cs" />
     <Compile Include="src\BinaryHeap.cs" />
+    <Compile Include="src\BinominalHeap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

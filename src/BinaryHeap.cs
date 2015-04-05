@@ -34,7 +34,7 @@ namespace DataStructures
             return max;
         }
 
-        public void Add(int key)
+        public void Insert(int key)
         {
             keys.Add(key);
             OrderUpFrom(keys.Count - 1);
