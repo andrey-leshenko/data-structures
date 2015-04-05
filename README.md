@@ -2,8 +2,7 @@
 Basic data structures implemented in C# in the simplest way possible.
 
 ## Binary Heap
-
-Wikipedia article: (http://en.wikipedia.org/wiki/Binary_heap)
+http://en.wikipedia.org/wiki/Binary_heap
 
 | Operation     | Complexity        |
 | ------------- |:----------------- |
@@ -14,7 +13,7 @@ Wikipedia article: (http://en.wikipedia.org/wiki/Binary_heap)
 | merge         | O(m * log(n + m)) |
 
 ## Binominal Heap
-Wikipedia article: (http://en.wikipedia.org/wiki/Binomial_heap)
+http://en.wikipedia.org/wiki/Binomial_heap
 
 | Operation     | Complexity        |
 | ------------- |:----------------- |
@@ -24,6 +23,6 @@ Wikipedia article: (http://en.wikipedia.org/wiki/Binomial_heap)
 | construct     | O(n)              |
 | merge         | O(log n)          |
 
-Will be added later:
+## Will be added later:
 - 2-3-4 Tree (http://en.wikipedia.org/wiki/2%E2%80%933%E2%80%934_tree)
 - Red-Black Tree (http://en.wikipedia.org/wiki/Red%E2%80%93black_tree)
