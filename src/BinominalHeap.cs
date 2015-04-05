@@ -14,6 +14,13 @@ namespace DataStructures
             trees.Add(new BinominalTree(singleKey));
         }
 
+        public BinominalHeap(int[] keys)
+        {
+            for (int i = 0; i < keys.Length; i++) {
+                MergeWith(new BinominalHeap(keys[i]));
+            }
+        }
+
         public void MergeWith(BinominalHeap other)
         {
             BinominalTree carryIn = null;
