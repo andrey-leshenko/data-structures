@@ -26,9 +26,9 @@ namespace DataStructures
             BinominalTree carryIn = null;
             int i = 0;
 
-            int treesCount = Math.Max(TreesLength(), other.TreesLength());
+            int minTreesCount = Math.Max(TreesLength(), other.TreesLength());
 
-            while (i < treesCount || carryIn != null) {
+            while (i < minTreesCount || carryIn != null) {
                 BinominalTree carryOut;
                 BinominalTree sum = CombineTrees(GetTree(i), other.GetTree(i), carryIn, out carryOut);
                 SetTree(i, sum);
@@ -55,8 +55,8 @@ namespace DataStructures
 
             trees[maxTree.Order] = null;
 
-            if (maxTree.Order == trees.Count)
-                TrimEnd();
+            if (maxTree.Order == trees.Count - 1)
+                TrimTreesArray();
 
             MergeWith(childrenHeap);
             return maxTree.key;
@@ -90,9 +90,9 @@ namespace DataStructures
             trees[order] = value;
         }
 
-        void TrimEnd()
+        void TrimTreesArray()
         {
-            int i = trees.Count;
+            int i = trees.Count - 1;
             while (i >= 0 && trees[i] == null) {
                 trees.RemoveAt(i);
                 i--;
