@@ -49,8 +49,15 @@
   <ItemGroup>
     <Compile Include="examples\BinaryHeapExamples.cs" />
     <Compile Include="examples\BinominalHeapExamples.cs" />
+    <Compile Include="examples\SortingExamples.cs" />
     <Compile Include="src\BinaryHeap.cs" />
     <Compile Include="src\BinominalHeap.cs" />
+    <Compile Include="src\sorting\BubbleSort.cs" />
+    <Compile Include="src\sorting\BucketSort.cs" />
+    <Compile Include="src\sorting\InsertSort.cs" />
+    <Compile Include="src\sorting\MergeSort.cs" />
+    <Compile Include="src\sorting\QuickSort.cs" />
+    <Compile Include="src\sorting\SelectSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
