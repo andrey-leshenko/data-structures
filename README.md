@@ -16,6 +16,7 @@ http://en.wikipedia.org/wiki/Binary_heap
 | merge         | O(m * log(n + m)) |
 
 ### Binominal Heap
+
 http://en.wikipedia.org/wiki/Binomial_heap
 
 | Operation     | Complexity        |
