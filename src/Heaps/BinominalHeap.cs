@@ -24,11 +24,9 @@ namespace DataStructures
         public void MergeWith(BinominalHeap other)
         {
             BinominalTree carryIn = null;
+
             int i = 0;
-
-            int minTreesCount = Math.Max(TreesLength(), other.TreesLength());
-
-            while (i < minTreesCount || carryIn != null) {
+            while (i < trees.Count || i < other.trees.Count || carryIn != null) {
                 BinominalTree carryOut;
                 BinominalTree sum = AddTrees(GetTree(i), other.GetTree(i), carryIn, out carryOut);
                 SetTree(i, sum);
@@ -59,12 +57,8 @@ namespace DataStructures
                 TrimTreesArray();
 
             MergeWith(childrenHeap);
-            return maxTree.key;
-        }
 
-        public int TreesLength()
-        {
-            return trees.Count;
+            return maxTree.key;
         }
 
         public bool Empty()
@@ -75,7 +69,7 @@ namespace DataStructures
             return true;
         }
 
-        public BinominalTree GetTree(int order)
+        BinominalTree GetTree(int order)
         {
             if (order >= trees.Count)
                 return null;
@@ -140,7 +134,7 @@ namespace DataStructures
             }
         }
 
-        public class BinominalTree
+        class BinominalTree
         {
             public int key;
             public List<BinominalTree> children = new List<BinominalTree>();
