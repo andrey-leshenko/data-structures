@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DataStructures
 {
@@ -22,7 +23,7 @@ namespace DataStructures
 
         public int Max()
         {
-            return keys[0];
+            return keys[root];
         }
 
         public int ExtractMax()
@@ -48,8 +49,8 @@ namespace DataStructures
         void OrderDownFrom(int node)
         {
             while (!IsLeaf(node) && keys[MaxChild(node)] > keys[node]) {
-                SwapWithParent(MaxChild(node));
                 node = MaxChild(node);
+                SwapWithParent(node);
             }
         }
 
@@ -70,13 +71,10 @@ namespace DataStructures
 
         int MaxChild(int node)
         {
-            if (!HasRightChild(node))
-                return LeftChild(node);
-
-            int left = LeftChild(node);
             int right = RightChild(node);
+            int left = LeftChild(node);
 
-            return keys[right] > keys[left] ? right : left;
+            return (HasRightChild(node) && keys[right] > keys[left]) ? right : left;
         }
 
         void MoveLastToRoot()
