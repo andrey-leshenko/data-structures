@@ -30,7 +30,7 @@ namespace DataStructures
 
             while (i < minTreesCount || carryIn != null) {
                 BinominalTree carryOut;
-                BinominalTree sum = CombineTrees(GetTree(i), other.GetTree(i), carryIn, out carryOut);
+                BinominalTree sum = AddTrees(GetTree(i), other.GetTree(i), carryIn, out carryOut);
                 SetTree(i, sum);
                 carryIn = carryOut;
                 i++;
@@ -108,7 +108,7 @@ namespace DataStructures
             return maxTree;
         }
 
-        BinominalTree CombineTrees(BinominalTree left, BinominalTree right, BinominalTree carryIn, out BinominalTree carryOut)
+        BinominalTree AddTrees(BinominalTree left, BinominalTree right, BinominalTree carryIn, out BinominalTree carryOut)
         {
             if (left != null && right != null) {
                 carryOut = CombineTrees(left, right);
@@ -133,10 +133,11 @@ namespace DataStructures
             if (b == null)
                 return a;
 
-            if (a.key >= b.key)
+            if (a.key >= b.key) {
                 return a.AddSubTree(b);
-            else
+            } else {
                 return b.AddSubTree(a);
+            }
         }
 
         public class BinominalTree
@@ -153,12 +154,10 @@ namespace DataStructures
 
             public BinominalTree AddSubTree(BinominalTree other)
             {
-                if (other != null) {
-                    if (Order != other.Order) {
-                        throw new Exception("Can not add binominal trees of different orders");
-                    }
-                    children.Add(other);
+                if (Order != other.Order) {
+                    throw new Exception("Can not add binominal trees of different orders");
                 }
+                children.Add(other);
                 return this;
             }
         }
