@@ -15,7 +15,7 @@ namespace DataStructures.Examples
             b.Insert(8);
 
             while (b.Count() > 0) {
-                Console.Write(b.PopMax() + ", ");
+                Console.Write(b.ExtractMax() + ", ");
             }
 
             // Output:
@@ -30,7 +30,7 @@ namespace DataStructures.Examples
             int[] downSorted = new int[unsorted.Length];
 
             for (int i = 0; i < downSorted.Length; i++) {
-                downSorted[i] = b.PopMax();
+                downSorted[i] = b.ExtractMax();
             }
 
             // downSorted is [9, 5, 4, 3]

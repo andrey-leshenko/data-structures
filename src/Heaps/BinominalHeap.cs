@@ -47,7 +47,7 @@ namespace DataStructures
             MergeWith(new BinominalHeap(key));
         }
 
-        public int PopMax()
+        public int ExtractMax()
         {
             BinominalTree maxTree = GetMaxTree();
             BinominalHeap childrenHeap = new BinominalHeap();

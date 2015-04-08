@@ -15,7 +15,7 @@ namespace DataStructures.Examples
             b.Insert(8);
 
             while (!b.Empty()) {
-                Console.Write(b.PopMax() + ", ");
+                Console.Write(b.ExtractMax() + ", ");
             }
 
             // Output:
@@ -33,7 +33,7 @@ namespace DataStructures.Examples
             heap1.MergeWith(heap2);
 
             while (!heap1.Empty()) {
-                Console.Write(heap1.PopMax() + ", ");
+                Console.Write(heap1.ExtractMax() + ", ");
             }
 
             // Output:

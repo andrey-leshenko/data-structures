@@ -25,7 +25,7 @@ namespace DataStructures
             return keys[0];
         }
 
-        public int PopMax()
+        public int ExtractMax()
         {
             int max = Max();
             MoveLastToRoot();
