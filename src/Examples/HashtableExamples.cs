@@ -10,7 +10,7 @@ namespace DataStructures.Examples
 {
     static class HashtableExamples
     {
-        public static void Main()
+        public static void Example1()
         {
             int size = 11;
 
