@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Compile Include="Examples\HashtableExamples.cs" />
+    <Compile Include="Hashtables\OpenHashtable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Examples\BinaryHeapExamples.cs" />
     <Compile Include="Examples\BinominalHeapExamples.cs" />
